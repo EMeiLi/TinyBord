@@ -1,0 +1,9 @@
+[submodule "thirdlib/CMSIS-Driver"]
+	path = thirdlib/CMSIS-Driver
+	url = https://github.com/ARM-software/CMSIS-Driver.git
+[submodule "thirdlib/CMSIS_5"]
+	path = thirdlib/CMSIS_5
+	url = https://github.com/ARM-software/CMSIS_5.git
+[submodule "thirdlib/u8g2"]
+	path = thirdlib/u8g2
+	url = https://github.com/olikraus/u8g2.git
