@@ -7,3 +7,12 @@
 [submodule "thirdlib/U8G2/u8g2"]
 	path = thirdlib/U8G2/u8g2
 	url = https://github.com/olikraus/u8g2.git
+[submodule "thirdlib/CMSIS_Driver/Driver_LIB"]
+	path = thirdlib/CMSIS_Driver/Driver_LIB
+	url = https://github.com/ARM-software/CMSIS-Driver.git
+[submodule "thirdlib/CMSIS/CMSIS_LIB"]
+	path = thirdlib/CMSIS/CMSIS_LIB
+	url = https://github.com/ARM-software/CMSIS_5.git
+[submodule "thirdlib/U8G2/U8G2_LIB"]
+	path = thirdlib/U8G2/U8G2_LIB
+	url = https://github.com/olikraus/u8g2.git
