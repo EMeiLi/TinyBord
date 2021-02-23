@@ -3,7 +3,7 @@ SET(CMAKE_SYSTEM_VERSION 1)
 cmake_minimum_required(VERSION 3.7)
 
 file(GLOB_RECURSE SOURCES
-    "U8G2_LIB/csrc/*.*"
+    "u8g2/csrc/*.*"
     "Config/*.*"
 )
 
@@ -18,6 +18,6 @@ target_include_directories(u8g2 PRIVATE
 )
 
 target_include_directories(u8g2 PUBLIC
-    U8G2_LIB/csrc/
+    u8g2/csrc/
     Config/
 )

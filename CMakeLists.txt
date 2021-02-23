@@ -13,8 +13,8 @@ file(GLOB_RECURSE SOURCES "app/*.*" "driver/*.*" "stm32cubemx/Core/*.*")
 
 
 add_subdirectory(stm32cubemx)
-add_subdirectory(thirdlib/CMSIS)
-add_subdirectory(thirdlib/U8G2)
+add_subdirectory(thirdlib/cmsis_lib)
+add_subdirectory(thirdlib/u8g2_lib)
 
 add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
 
