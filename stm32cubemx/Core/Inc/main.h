@@ -55,7 +55,7 @@ void SystemClock_Config(void);
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void HAL_UART_Set_Baud(UART_HandleTypeDef *uart, uint32_t baud);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

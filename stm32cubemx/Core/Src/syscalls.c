@@ -31,18 +31,16 @@
 #include <sys/time.h>
 #include <sys/times.h>
 
-
 /* Variables */
 //#undef errno
 extern int errno;
 extern int __io_putchar(int ch) __attribute__((weak));
 extern int __io_getchar(void) __attribute__((weak));
 
-register char * stack_ptr asm("sp");
+register char *stack_ptr asm("sp");
 
-char *__env[1] = { 0 };
+char *__env[1] = {0};
 char **environ = __env;
-
 
 /* Functions */
 void initialise_monitor_handles()
@@ -60,10 +58,12 @@ int _kill(int pid, int sig)
 	return -1;
 }
 
-void _exit (int status)
+void _exit(int status)
 {
 	_kill(status, -1);
-	while (1) {}		/* Make sure we hang here */
+	while (1)
+	{
+	} /* Make sure we hang here */
 }
 
 __attribute__((weak)) int _read(int file, char *ptr, int len)
@@ -72,10 +72,11 @@ __attribute__((weak)) int _read(int file, char *ptr, int len)
 
 	for (DataIdx = 0; DataIdx < len; DataIdx++)
 	{
-		*ptr++ = __io_getchar();
+		*ptr = __io_getchar();
+		if (*ptr++ == '\n') break;
 	}
 
-return len;
+	return ++DataIdx;
 }
 
 __attribute__((weak)) int _write(int file, char *ptr, int len)
@@ -93,7 +94,6 @@ int _close(int file)
 {
 	return -1;
 }
-
 
 int _fstat(int file, struct stat *st)
 {
